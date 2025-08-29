@@ -30,7 +30,6 @@ import com.battlebucks.battlebucksgithubapp.data.network.model.response.GithubRe
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ProfileScreen(username: String, vm: ProfileViewModel) {
-    // brand palette (matches your Search screen)
     val BgYellow      = Color(0xFFFFF4CC)
     val DarkGreen     = Color(0xFF008000)
     val LightGreenBtn = Color(0xFFA4DB75)
@@ -95,7 +94,6 @@ fun ProfileScreen(username: String, vm: ProfileViewModel) {
                         contentPadding = PaddingValues(16.dp),
                         verticalArrangement = Arrangement.spacedBy(12.dp)
                     ) {
-                        // Header card: avatar + bio + quick stats
                         item {
                             ElevatedCard(
                                 shape = RoundedCornerShape(24.dp),
@@ -178,7 +176,6 @@ fun ProfileScreen(username: String, vm: ProfileViewModel) {
                             paging[index]?.let { RepoCard(it) }
                         }
 
-                        // Paging indicators
                         paging.apply {
                             when {
                                 loadState.refresh is androidx.paging.LoadState.Loading ||
@@ -256,7 +253,6 @@ private fun RepoCard(repo: GithubRepoDto) {
 
             Spacer(Modifier.height(10.dp))
 
-            // Stats row as small chips
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 AssistChip(
                     onClick = {},

@@ -26,7 +26,8 @@ import androidx.compose.ui.unit.sp
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun SearchScreen(onSubmit: (String) -> Unit) {
+fun SearchScreen(  onSubmit: (String) -> Unit) {
+
     // palette
     val BgYellow      = Color(0xFFFFF4CC)
     val DarkGreen     = Color(0xFF008000)
